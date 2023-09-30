@@ -1,0 +1,52 @@
+Jeu de données relié à l'article: 
+Le problème d'optimisation du chargement des trains routiers
+(The road train optimization problem with load assignment)
+
+
+Auteurs:
+Eliseu Araujo (araujo.eliseu28@gmail)
+Maryam Darvish (maryam.darvish@fsa.ulaval.ca,https://www4.fsa.ulaval.ca/enseignant/maryam-darvish/)
+Jacques Renaud (jacques.renaud@fsa.ulaval.ca, https://www4.fsa.ulaval.ca/enseignant/jacques-renaud/)
+
+Le jeu de données renferme 160 problèmes.
+Les fichiers sont des fichiers textes réguliers (de format .txt).
+Les fichiers sont nommés comme suit:
+   TL[4,8,12,16]_LTL[4,8,12,16,20]_[L,H]_[A,B,C].
+
+[4,8,12,16] représente le nombre de commandes en charges pleines (TL - truck load)
+[4,8,12,16,20] représente le nombre de commandes en charges partielles (LTL - less thantruck load)
+[L,H] représente la taille des commandes en charges partielles (L pour petites, H pour grandes)
+[A, B, C] une numérotation du problème.
+
+Ainsi TL4_LTL8_L_C.txt est un problème avec 4 commandes en charges pleines, 8 commandes en charges partielles 
+dont la demande est petite et ce problème est l'exemplaire C avec cette configuration.
+
+
+Les fichiers ont la structure suivante:
+
+D	T	Q	F	U	M
+1	10	12	24		
+2	18	38	24		
+3	36	27	24		
+4	36	40	24		
+5	37	26	8		
+6	29	36	9		
+7	32	37	8		
+8	4	47	9		
+9	49	3			
+10	22	13			
+11	15	35			
+
+Première ligne:
+D  :  Nombre de clients  (donc les lignes 2 à D+1)
+T  :  Nombre de terminaux (donc les lignes D+2 à D+T+1)
+Q :   Capacité d'une remorque 
+F :  Coût fixe d'un véhicule
+U :  Coût par unité transporté
+M :  Nombre de trains routiers (chauffeurs)
+
+Les lignes 2 à D+1 :
+Numéro du client ; coordonnée X ; coordonnée Y ; demande
+
+Les lignes D+2 à D+T+1 :
+Numéro du terminal ; coordonnée X ; coordonnée Y
